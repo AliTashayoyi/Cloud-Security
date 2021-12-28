@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Cloud Diagram](Diagram/Cloud-Diagram.drawio)
+![Cloud Diagram](Diagram/Cloud-Security.drawio)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the pentest.yml file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -97,7 +97,7 @@ The playbook implements the following tasks:
 ```
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![docker-ouput](Diagram/Cloud-Diagram.jpg)
+![Docker Ouput](Diagram/Cloud-Diagram.jpg)
 
 
 ### Target Machines & Beats
