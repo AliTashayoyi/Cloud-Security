@@ -1,5 +1,3 @@
-# Cloud-Security
- 
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
@@ -99,7 +97,8 @@ The playbook implements the following tasks:
 ```
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![Docker ouput](Screenshots/docker-output.jpg)
+![Docker ouput](Diagram/Cloud-Diagram.jpg)
+
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
