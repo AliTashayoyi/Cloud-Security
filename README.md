@@ -130,12 +130,12 @@ SSH into the control node and follow the steps below:
 ```
   - pentest.yml, elk.yml, filebeat-playbook.yml, metricbeat-playbook.yml
 ```
-*** - Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+
  I updated the `Host file` to make Ansible run the playbook on a specific machine. Also I need to  specify which machine to install the ELK server on versus which to install Filebeat on as follows:
   ```
   - In the ansible script, I must specify the hosts option in my script to determine where that script should install the specific programs to. For example, Web Servers, ELK and only IP entries of the Web servers entries to the host file will be updated.
   ``` 
-- *** Which URL do you navigate to in order to check that the ELK server is running?
+
 I have navigated to the following URL in order to check that the ELK server is running:
 ```
   - http://20.106.143.244:5601/app/kibana#/home
