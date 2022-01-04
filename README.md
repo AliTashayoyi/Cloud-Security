@@ -122,28 +122,17 @@ These Beats allow me to collect the following information from each machine:
 In order to use the playbook, I will need to have an Ansible control node already configured. Assuming having such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the `config` file to `/etc/` folder.
+- Copy the `elk.yml` file to `/etc/ansible/` folder.
 - Update the `hosts` file to include `the IPs of the webserver.`
-- Run the playbook, and navigate to `the targeted machine` to check that the installation worked as expected.
-*** ***
-- Which file is the playbook? Where do you copy it? 
-```
-  - pentest.yml, elk.yml, filebeat-playbook.yml, metricbeat-playbook.yml
-```
+- Run the playbook, and navigate to `http://(ELK Server IP adrress):5601/app/kibana#/home` to check that the installation worked as expected.
 
- I updated the `Host file` to make Ansible run the playbook on a specific machine. Also I need to  specify which machine to install the ELK server on versus which to install Filebeat on as follows:
-  ```
-  - In the ansible script, I must specify the hosts option in my script to determine where that script should install the specific programs to. For example, Web Servers, ELK and only IP entries of the Web servers entries to the host file will be updated.
-  ``` 
 
-I have navigated to the following URL in order to check that the ELK server is running:
-```
-  - http://20.106.143.244:5601/app/kibana#/home
-```
 
 The specific commands the user will need to run to download the playbook, update the files, etc.
+
 ```
 -ls /etc/ansible/
+After running nano /etc/ansible/[playbook], I would edit the script to specify which host to install the playbook on and make relevent changes to be able running the playbooks
 -nano /etc/ansible/hosts
 -nano /etc/ansible/ansible.cfg
 -nano /etc/ansible/[playbook-name]
