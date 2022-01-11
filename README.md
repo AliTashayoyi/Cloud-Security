@@ -28,24 +28,24 @@ Load balancing ensures that the application will be highly `available`, in addit
 
 
 ### Load Balancer Protection aspect:
-```
-  -Load Balancers protect the availabilty of the servers, and will switch loads in between the servers so that no individual server is in distress and unable to respond to requests, and the queries are distributed among the servers in the Load balancer backend pool.
-  ```
+
+  Load Balancers protect the availabilty of the servers, and will switch loads in between the servers so that no individual server is in distress and unable to respond to requests, and the queries are distributed among the servers in the Load balancer backend pool.
+  
   ### Jump-Box Advantages 
-  ```
-  - Jump box offers security and isolates points of entry to the network. Only SSH can be used on the allowed orignating IP addresses.
-```
+  
+  Jump box offers security and isolates points of entry to the network. Only SSH can be used on the allowed orignating IP addresses.
+
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the `configuration` and system `log`.
 
 ### Filebest:
-```
+
   Filebeat is a lightweight shipper for forwarding and centralizing log data. Installed as an agent on my servers, Filebeat monitors the log files or locations that I specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
-  ```
+  
 ### Metricbeat:
 
-```
+
    Metricbeat takes the metrics and statistics that it collects and ships them to the output that I specify, such as Elasticsearch or Logstash. Metricbeat helps me monitor my servers by collecting metrics from the system and services running on the server, such as: Apache.
-```
+
 The configuration details of each machine may be found below.
 
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -62,15 +62,15 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the `Jump-Box/ELK Server` machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-```
+
 - My Personal IP Address (The user)
-```
+
 Machines within the network can only be accessed by `Jump-Box`.
 
 I allowe the Jump-Box to access my ELK VM with its IP address as follow:
-```
+
 - Jump-Box - 10.0.0.4
-```
+
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
@@ -84,17 +84,17 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually and 
 the main advantage of automating configuration with Ansible is:
-```
-- To download the applications such as Docker and Python automatically without needing to SSH into each machine.
-```
+
+To download the applications such as Docker and Python automatically without needing to SSH into each machine.
+
 The playbook implements the following tasks:
-```
+
 - Install Docker
 - Install Pip
 - Install Python
 - Create and download ELK container
 - Adjust memory to 2.6BG RAM
-```
+
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 ![Docker Ouput](Diagram/docker-output.jpg)
@@ -103,21 +103,21 @@ The following screenshot displays the result of running `docker ps` after succes
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 
-```
+
   - Web-1
   - Web-2
-```
+
 I have installed the following Beats on these machines:
 
-```
+
   - Filebeat
   - Metricbeat
-```
+
 These Beats allow me to collect the following information from each machine:
-```
+
   - Filebeat looks up SSH logins, linux commands, and linux logins
   - Metric monitors for CPU, RAM, and network use
-```
+
 ### Using the Playbook
 In order to use the playbook, I will need to have an Ansible control node already configured. Assuming having such a control node provisioned: 
 
@@ -130,11 +130,15 @@ SSH into the control node and follow the steps below:
 
 The specific commands the user will need to run to download the playbook, update the files, etc.
 
-```
+
 -ls /etc/ansible/
+
 After running nano /etc/ansible/[playbook], I would edit the script to specify which host to install the playbook on and make relevent changes to be able running the playbooks
+
 -nano /etc/ansible/hosts
+
 -nano /etc/ansible/ansible.cfg
+
 -nano /etc/ansible/[playbook-name]
+
 -ansible-playbook /etc/ansible/[playbook-name]
-```
