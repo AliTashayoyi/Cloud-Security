@@ -9,10 +9,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
   - [pentest.yml](Playbooks/pentest.yml)
   - [filebeat-playbook.yml](Playbooks/filebeat-playbook.yml)
   - [metricbeat-playbook.yml](Playbooks/metricbeat-playbook.yml)
-  - [elk.yml](Playbooks/elk.yml)
-
-This document contains the following details:
-- Description of the Topology
+  - [elk.yml](Ansibles/ELK-YAML)
 - Access Policies
 - ELK Configuration
   - Beats in Use
